@@ -1,0 +1,80 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музыкальная открытка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>получи свою уникальную<br>музыкальную <span class="italic">открытку!</span></h1>
+        </div>
+        
+        <div class="content">
+            <div class="selection-container">
+                <select id="nameSelect">
+                    <option value="" disabled selected>Выбери свое имя</option>
+                    <option value="Общее поздравление">Общее поздравление</option>
+                    <option value="Эля">Эля</option>
+                    <option value="Арина">Арина</option>
+                    <option value="Маша Ф">Маша Ф</option>
+                    <option value="Аня М">Аня М</option>
+                    <option value="Аня Морозова">Аня Морозова</option>
+                    <option value="Катя E">Катя E</option>
+                    <option value="Катя П">Катя П</option>
+                    <option value="Катя C">Катя C</option>
+                    <option value="Катя В">Катя В</option>
+                    <option value="Катя Ю">Катя Ю</option>
+                    <option value="Полина">Полина</option>
+                    <option value="Лена">Лена</option>
+                    <option value="Виктория">Виктория</option>
+                    <option value="Вера">Вера</option>
+                    <option value="Анжелика">Анжелика</option>
+                    <option value="Александра">Александра</option>
+                </select>
+                
+                <button id="playButton" disabled>Поставить пластинку</button>
+            </div>
+            
+            <div class="record-container">
+                <div class="record-player">
+                    <img src="assets/player_forvard.png" class="player_f" width="300">
+                    <img src="assets/player.png" alt="Record Player" width="300">
+                    <div class="shadow"></div>
+                    <img src="assets/disk.png" alt="Vinyl Disk" class="disk" id="disk">
+                    <img src="" alt="Persona" class="disk-persona" id="diskPersona">
+                </div>
+                
+                <div class="music-player" id="musicPlayer">
+                    <div class="player-controls">
+                        <button id="togglePlayButton" class="play-button">
+                            <svg viewBox="0 0 24 24" class="play-icon">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                            <svg viewBox="0 0 24 24" class="pause-icon hidden">
+                                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                            </svg>
+                        </button>
+                        <div class="time">
+                            <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+                        </div>
+                    </div>
+                    <div class="track-info">
+                        <div class="track-name" id="trackName"></div>
+                        <div class="track-artist" id="trackArtist"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flowers">
+            <img src="assets/Painted Flower 05 1.png" alt="Painted Flowers" class="flower-image">
+        </div>
+    </div>
+    
+    <audio id="audioPlayer"></audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
